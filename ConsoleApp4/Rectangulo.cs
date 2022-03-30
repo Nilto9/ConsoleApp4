@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp4
 {
+
     public class Rectangulo
     {
         public Punto p1 { get; set; }
