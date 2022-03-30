@@ -6,22 +6,29 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp4
 {
-    class Rectangulo
+    public class Rectangulo
     {
         public Punto p1 { get; set; }
         public Punto p2 { get; set; }
         public Punto p3 { get; set; }
         public Punto p4 { get; set; }
 
-        public int CalcularArea()
+
+        public double CalcularDistancia(Punto pf, Punto pi)
         {
-            int Area = (p3.y - p1.y) * (p2.x - p1.x);
-            return (Area);
+            return Math.Sqrt(Math.Pow(pf.x - pi.x, 2) + Math.Pow(pf.y - pi.y, 2));
         }
-        public int CalcularPerimetro()
+        public double CalcularArea()
         {
-            int peri = Math.Abs(((p3.y + p1.y) * 2) + ((p2.x + p1.x) * 2));
-            return peri;
+            double dh = CalcularDistancia(p2, p1);
+            double dv = CalcularDistancia(p4, p1);
+            return dh * dv;
+        }
+        public double CalcularPerimetro()
+        {
+            double dh = CalcularDistancia(p2, p1);
+            double dv = CalcularDistancia(p4, p1);
+            return dh + dh + dv + dv;
         }
     }
 }

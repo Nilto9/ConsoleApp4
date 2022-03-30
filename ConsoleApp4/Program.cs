@@ -13,30 +13,38 @@ namespace ConsoleApp4{
             Rectangulo rectangulo = new Rectangulo();
             //leer coordenadas
 
-            Console.WriteLine("Ingrese y3");
-            int y3 = int.Parse(Console.ReadLine());
-            rectangulo.p3 = new Punto(0, y3);
+            
 
-            Console.WriteLine("Ingrese y1 ");
+            Console.WriteLine("Ingrese valor de los primer punto ");
             int y1 = int.Parse(Console.ReadLine());
-            Console.WriteLine("Ingrese x1 ");
             int x1 = int.Parse(Console.ReadLine());
             rectangulo.p1 = new Punto(x1, y1);
 
-            Console.WriteLine("Ingrese x2");
+            Console.WriteLine("Ingrese valor de los segundo punto");
             int x2 = int.Parse(Console.ReadLine());
-            rectangulo.p2 = new Punto(x2, 0);
+            int y2 = int.Parse(Console.ReadLine());
+            rectangulo.p3 = new Punto(x2, y2);
 
-            int area = rectangulo.CalcularArea();
-            int perimmetro = rectangulo.CalcularPerimetro();
+            Console.WriteLine("Ingrese valor de los tercer punto");
+            int y3 = int.Parse(Console.ReadLine());
+            int x3 = int.Parse(Console.ReadLine());
+            rectangulo.p3 = new Punto(x3, y3);
+
+            Console.WriteLine("Ingrese valor de los cuarto punto");
+            int y4 = int.Parse(Console.ReadLine());
+            int x4 = int.Parse(Console.ReadLine());
+            rectangulo.p4 = new Punto(x4, y4);
+
+
+            double area = rectangulo.CalcularArea();
+            double perimmetro = rectangulo.CalcularPerimetro();
 
             Console.WriteLine("El area del rectangulo es: " + area);
             Console.WriteLine("El perimetro del rectangulo es: " + perimmetro);
 
             Console.Read();
                 
-            }
-        }
+        }  
 
     }
 }
